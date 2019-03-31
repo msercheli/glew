@@ -11,3 +11,4 @@ def commands():
     if building:
         env.CMAKE_MODULE_PATH.append("{root}/cmake")
 
+uuid = "repository.glew"
