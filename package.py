@@ -4,7 +4,7 @@ name = 'glew'
 
 version = '2.0.0'
 
-authors = ['Marcelo Sercheli']
+authors = ['Nigel Stewart']
 
 def commands():
     env.LD_LIBRARY_PATH.prepend("{root}/lib64")
