@@ -1,10 +1,13 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 include(RezBuild)
+include(RezRepository)
 include(ExternalProject)
 
 set(glew_version ${GLEW_VERSION})
-set(url_glew https://downloads.sourceforge.net/project/glew/glew/${glew_version}/glew-${glew_version}.tgz)
+rez_set_archive(
+    url_glew glew/glew-${glew_version}.tgz
+    https://downloads.sourceforge.net/project/glew/glew/${glew_version}/glew-${glew_version}.tgz)
 
 if(${REZ_BUILD_INSTALL})
     set(install_cmd make GLEW_DEST="${CMAKE_INSTALL_PREFIX}" -j$ENV{REZ_BUILD_THREAD_COUNT} install)
